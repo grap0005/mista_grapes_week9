@@ -49,9 +49,12 @@ table {
 
 
 
+
 /* ********************************** */
             /* MAIN STYLE  */
 /* ********************************** */
+
+
 
 HTML {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -60,7 +63,7 @@ HTML {
 .container{
     /* gives the site a max width so it doesnt expand forever */
     max-width: 900px;
-    background-color: yellow;
+    background-color: rgb(246, 255, 0);
 
     /* centre the container div in thr browser window */
     margin: 0 auto;
@@ -70,11 +73,73 @@ HTML {
 
 h1{
     font-size: 40px;
-    color: blue;
-    background-color: red;
+    color: rgb(0, 255, 166);
+    background-color: rgb(238, 255, 0);
     /* margin is the space outside of an element, it pushes other elements away */
     margin-bottom: 20px;
 
     /* padding is the space inside the element, it pushes content away from the edge */
     padding: 10px;
+}
+
+
+
+
+/* ************************************* */
+         /* MOBILE STYLE */
+/* ************************************* */
+
+
+
+/* target the tags only in the nav */
+nav a{
+    /* make them block elements, so we can style them like buttons */
+    display: block;
+    width: 100%;
+    background-color: lime;
+    padding: 10px;
+    border-top: 2px solid rgb(0, 139, 32);
+    border-bottom: 2px solid rgb(0, 139, 32);
+    /* center text */
+    text-align: center;
+    /* remove underline */
+    text-decoration: none;
+}
+
+nav a:hover, nav:active{
+    background-color: aqua;
+}
+
+
+
+
+/* ************************************* */
+         /* media quaries*/
+/* ************************************* */
+
+
+
+
+@media screen and (min-width:640px){
+    /* any style inside this media query will oly apply if the screen/browser is 640px or wider */
+
+    nav a{
+        float:left;
+        width: 25%;
+        /* boxsizing can make the padding and border not count toward the elements size */
+        box-sizing: border-box;
+    }
+
+    /* make sure the content goes below the floated stuff */
+
+    main{
+        clear: both;
+    }
+}
+
+/* order matters! Put the smallest media queries first */
+@media screen and (min-width:800px) {
+    nav a{
+        background-color: chartreuse;
+    }
 }
