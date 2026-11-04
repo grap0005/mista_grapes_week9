@@ -1,2 +1,4 @@
 # mista_grapes_week9
-media Queries and Responsive Design
+Media Queries and Responsive Design
+
+This is an update
